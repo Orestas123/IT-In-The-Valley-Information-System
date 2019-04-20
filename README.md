@@ -1,4 +1,4 @@
-# IT In The Valley Information System
+# IT In The Valley Information System (NetBeans)
 This application was made by following a case study. 
 It was made for a Magazine Editor, who can create and manage Magazines. 
 Application supports advertisement/media storage, where ads and media can be stored in one place, and then added to a magazine page. 
