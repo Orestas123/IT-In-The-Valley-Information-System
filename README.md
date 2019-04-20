@@ -1,5 +1,5 @@
 # IT In The Valley Information System
-This applciation was made by following a case study. 
+This application was made by following a case study. 
 It was made for a Magazine Editor, who can create and manage Magazines. 
 Application supports advertisement/media storage, where ads and media can be stored in one place, and then added to a magazine page. 
 New magazines can be easily created by using a page generator (html based).
