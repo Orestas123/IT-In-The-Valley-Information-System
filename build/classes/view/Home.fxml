@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="721.0" prefWidth="1168.0" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+   <children>
+      <BorderPane layoutX="436.0" layoutY="261.0" prefHeight="721.0" prefWidth="1168.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <StackPane fx:id="mainContent" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+         <left>
+            <VBox alignment="TOP_CENTER" prefHeight="625.0" styleClass="sidebar" stylesheets="@../css/sidebar.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Button id="home" fx:id="btnHome" alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#homeOnAction" prefHeight="109.0" prefWidth="147.0" styleClass="sidebar-button" text="Home">
+                     <font>
+                        <Font name="Arial Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="9.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/btnBreak.png" />
+                     </image>
+                  </ImageView>
+                  <Button id="prescription" fx:id="btnPrescription" alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#prescriptionOnAction" prefHeight="109.0" prefWidth="147.0" styleClass="sidebar-button" text="Magazine Issue">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="9.0" fitWidth="114.0" layoutX="52.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/btnBreak.png" />
+                     </image>
+                  </ImageView>
+                  <Button id="template" fx:id="btnTemplate" alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#templateOnAction" prefHeight="109.0" prefWidth="147.0" styleClass="sidebar-button" text="Templates">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="9.0" fitWidth="114.0" layoutX="52.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/btnBreak.png" />
+                     </image>
+                  </ImageView>
+                  <Button id="patient" fx:id="btnPatient" alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#patientOnAction" prefHeight="109.0" prefWidth="147.0" styleClass="sidebar-button" text="Magazines">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="9.0" fitWidth="114.0" layoutX="52.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/btnBreak.png" />
+                     </image>
+                  </ImageView>
+                  <Button id="drug" fx:id="btnDrug" alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#drugOnAction" prefHeight="109.0" prefWidth="147.0" styleClass="sidebar-button" text="Adverts/Media">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="9.0" fitWidth="114.0" layoutX="52.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/btnBreak.png" />
+                     </image>
+                  </ImageView>
+                  <Button id="setting" fx:id="btnSetting" alignment="BOTTOM_CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#settingOnAction" prefHeight="109.0" prefWidth="147.0" styleClass="sidebar-button" text="Settings">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <BorderPane prefHeight="62.0" prefWidth="1168.0" style="-fx-background-color: #1f2328;" BorderPane.alignment="CENTER">
+               <right>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="TOP_RIGHT" prefHeight="62.0" prefWidth="185.0" style="-fx-background-color: #282E34;" styleClass="log-out">
+                                 <children>
+                                    <Label fx:id="lblFullName" text="Full name">
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label fx:id="lblUserName" style="-fx-font-size: 11px;" text="User name (Editor)">
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <Hyperlink onAction="#handleLogOutButton" text="Log out">
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Hyperlink>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </right>
+               <left>
+                  <HBox alignment="CENTER" prefHeight="62.0" prefWidth="149.0" style="-fx-background-color: #1f2328;" BorderPane.alignment="CENTER" />
+               </left>
+               <center>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="65.0" prefWidth="490.0" styleClass="logo" />
+                     </children>
+                  </HBox>
+               </center>
+            </BorderPane>
+         </top>
+         <bottom>
+            <BorderPane prefHeight="22.0" styleClass="footer" BorderPane.alignment="CENTER">
+               <right>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </HBox>
+               </right>
+               <left>
+                  <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+               </left>
+               <center>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Hyperlink onAction="#handleDeveloperStory" text="Orestas Augustinaitis 2019 UWL" />
+                     </children>
+                  </HBox>
+               </center>
+            </BorderPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
